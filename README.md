@@ -20,7 +20,7 @@ La aplicación constará de una tabla para gestionar las diferentes noticias, un
 
 L'esquema de la base de dades és la següent:
 
-![Base de dades](database-schema.png)
+![Base de dades](imgs/database-schema.png)
 
 #### 2.2. Descripció de la interfície 
 
