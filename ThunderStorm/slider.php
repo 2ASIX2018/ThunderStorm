@@ -12,22 +12,22 @@
     <!-- Slide 1 -->
     <div class="carousel-item active" style="background-image: url('./media/gfx/slider1.jpg')">
      <div class="carousel-caption d-none d-md-block">
-       <h3>Primer Slide</h3>
-        <p>A vore que posem 1</p>
+       <h3>Potente</h3>
+        <p>Ofrecemos servidores de alto rendimiento de última generación</p>
       </div>
    </div>
     <!-- Slide 2 -->
    <div class="carousel-item" style="background-image: url('./media/gfx/slider2.jpg')">
      <div class="carousel-caption d-none d-md-block">
-       <h3>Segundo Slide</h3>
-        <p>A vore que posem 2</p>
+       <h3>Baja latencia</h3>
+        <p>Conexión de alta velocidad con los IXP más importantes</p>
      </div>
    </div>
    <!-- Slide 3 -->
    <div class="carousel-item" style="background-image: url('./media/gfx/slider3.jpg')">
       <div class="carousel-caption d-none d-md-block">
-        <h3>Tercer Slide</h3>
-       <p>A vore que posem 3</p>
+        <h3>Implementación Instantánea</h3>
+       <p>Servicio online con sólo un par de clicks</p>
      </div>
    </div>
   </div>

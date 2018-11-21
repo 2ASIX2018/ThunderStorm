@@ -12,17 +12,8 @@ if (isset($_COOKIE['/2ASIX2018/ThunderStorm/Role'])) { $_SESSION['role'] = $_COO
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <?php
-          if (isset($_SESSION['role']) && $_SESSION['role']=="admin") {
-        ?>
-          <li class="nav-item">
-            <a class="nav-link" href="administrar.php">Administrar</a>
-          </li>
-        <?php
-          }
-        ?>
-        <!--
+      <ul class="navbar-nav mr-auto">
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Hosting
@@ -32,7 +23,7 @@ if (isset($_COOKIE['/2ASIX2018/ThunderStorm/Role'])) { $_SESSION['role'] = $_COO
           <a class="dropdown-item" href="vps.php">Virtual Private Servers</a>
         </div>
         </li>
-        -->
+        
         <li class="nav-item">
           <a class="nav-link" href="about.php">About</a>
         </li>
@@ -44,18 +35,27 @@ if (isset($_COOKIE['/2ASIX2018/ThunderStorm/Role'])) { $_SESSION['role'] = $_COO
           <a class="nav-link" href="faq.php">FAQ</a>
         </li>
         -->
+      </ul>
+      <ul class="navbar-nav ml-auto">
         <?php
+          if (isset($_SESSION['role']) && $_SESSION['role']=="admin") {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="administrar.php"><button type="button" class="btn btn-success btn-sm">Administrar</button></a>
+          </li>
+        <?php
+          }
           if (!isset($_SESSION['username'])) {
         ?>
           <li class="nav-item">
-            <a class="nav-link" href="login.php">Acceder</a>
+            <a class="nav-link" href="login.php"><button type="button" class="btn btn-primary btn-sm">Acceder</button></a>
           </li>
         <?php
           }
           else {
         ?>
           <li class="nav-item">
-            <a class="nav-link" href="logout.php">Desconectar</a>
+            <a class="nav-link" href="logout.php"><button type="button" class="btn btn-danger btn-sm">Desconectar</button></a>
           </li>
         <?php
           }
