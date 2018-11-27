@@ -48,14 +48,14 @@
             <div class="control-group form-group">
               <div class="controls">
                 <label>Usuario:</label>
-                <input type="text" class="form-control" name="inputUser" required="required" placeholder="usuario" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, introduce tu nombre de usuario.'" oninput="document.getElementById('controla-errors').innerHTML = ''">
+                <input id="InputUsuari" type="text" class="form-control" name="inputUser" required="required" placeholder="usuario" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, introduce tu nombre de usuario.'; document.getElementById('InputUsuari').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('InputUsuari').classList.remove('is-invalid');">
                 <p class="help-block"></p>
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Contraseña:</label>
-                <input type="password" class="form-control" name="inputPassword" required="required" placeholder="contraseña" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, introduce tu contraseña.'" oninput="document.getElementById('controla-errors').innerHTML = ''">
+                <input id="InputContrasenya" type="password" class="form-control" name="inputPassword" required="required" placeholder="contraseña" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, introduce tu contraseña.'; document.getElementById('InputContrasenya').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('InputContrasenya').classList.remove('is-invalid');">
               </div>
             </div>         
             <div class="checkbox">
@@ -66,7 +66,7 @@
             <div class="controls">
               <label>No estás registrado? <a href="register.php">Regístrate ahora!</a></label>
             </div>
-            <div id="controla-errors" style="color: red"></div>
+            <div id="controla-errors" class="alert-dismissible alert-danger" style="color: red"></div>
             <button type="submit" class="btn btn-primary">Acceder</button>
           </form>
         </div>

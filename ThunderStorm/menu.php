@@ -41,14 +41,14 @@ if (isset($_COOKIE['/2ASIX2018/ThunderStorm/Role'])) { $_SESSION['role'] = $_COO
           if (isset($_SESSION['role']) && $_SESSION['role']=="admin") {
         ?>
           <li class="nav-item">
-            <a class="nav-link" href="administrar.php"><button type="button" class="btn btn-success btn-sm">Administrar</button></a>
+            <a class="nav-link" href="siteadmin.php"><button type="button" class="btn btn-success btn-sm">Administrar</button></a>
           </li>
         <?php
           }
           if (!isset($_SESSION['username'])) {
         ?>
           <li class="nav-item">
-            <a class="nav-link" href="login.php"><button type="button" class="btn btn-primary btn-sm">Acceder</button></a>
+            <a class="nav-link" href="login.php"><button type="button" class="btn btn-secondary btn-sm">Acceder</button></a>
           </li>
         <?php
           }

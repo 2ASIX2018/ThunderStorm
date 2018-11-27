@@ -29,15 +29,15 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Pricing
-        <small>Subheading</small>
+      <h1 class="mt-4 mb-3">VPS
+        <small>Planes</small>
       </h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.php">Home</a>
         </li>
-        <li class="breadcrumb-item active">Pricing</li>
+        <li class="breadcrumb-item active">VPS</li>
       </ol>
 
       <!-- Content Row -->
@@ -78,9 +78,9 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h3 class="card-header">Ultra</h3>
+            <h3 class="card-header">Enterprise</h3>
             <div class="card-body">
-              <div class="display-4">$159.99</div>
+              <div class="display-4">159.99€</div>
               <div class="font-italic">per month</div>
             </div>
             <ul class="list-group list-group-flush">

@@ -44,8 +44,8 @@
             <li>Procesadores de última generación</li>
             <li>Discos SSD</li>
           </ul>
-          <p>Al comprar un servidor VPS, se incluye una lista de plantillas de sistemas operativos basados en Linux que pueden instalarse con solo un par de clics, así te ahorras la molestia de hacerlo tu mismo.<br>
-          Las herramientas de administración sencillas pero potentes te permitirán maximizar el potencial de tu servidor VPS. Hardware robusto, optimización de Linux avanzada y un equipo de expertos que hacen mantenimiento permanente.</p>
+          <p>Al comprar un servidor VPS, se incluye una lista de plantillas de sistemas operativos basados en Linux que pueden instalarse con solo un par de clics, así te ahorras la molestia de hacerlo tu mismo.</p>
+          <p>Las herramientas de administración sencillas pero potentes te permitirán maximizar el potencial de tu servidor VPS. Hardware robusto, optimización de Linux avanzada y un equipo de expertos que hacen mantenimiento permanente.</p>
         </div>
         <div class="col-lg-6">
           <img class="img-fluid rounded" src="./media/gfx/webmin.jpg" alt="">
