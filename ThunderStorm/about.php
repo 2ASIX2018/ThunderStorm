@@ -93,46 +93,46 @@
       <div class="row">
         <div class="col-lg-3 mb-3">
           <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+            <img class="card-img-top" src="https://steamuserimages-a.akamaihd.net/ugc/931562209079952837/C2AE894DC6606BD03B203C8D86D95E887E1C40D7/" height="150vh" alt="">
             <div class="card-body">
-              <h4 class="card-title">Xavi Ciscar</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Director Ejecutivo</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+              <h4 class="card-title">Kiwi</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Anima y Alegra</h6>
+              <p class="card-text">Muy juguetón y simpático. Nunca se cansa.<br>Le gusta mirar por la ventana los coches que pasan.</p>
             </div>
             <div class="card-footer">
-              <a href="#">name@example.com</a>
+              <a href="mailto:kiwi@thunderstorm.com">kiwi@thunderstorm.com</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 mb-3">
           <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+            <img class="card-img-top" src="https://steamuserimages-a.akamaihd.net/ugc/931562209079952837/C2AE894DC6606BD03B203C8D86D95E887E1C40D7/" height="150vh" alt="">
             <div class="card-body">
-              <h4 class="card-title">Ahmet Simbahoe</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+              <h4 class="card-title">Kiwi</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Anima y Alegra</h6>
+              <p class="card-text">Muy juguetón y simpático. Nunca se cansa.<br>Le gusta mirar por la ventana los coches que pasan.</p>
             </div>
             <div class="card-footer">
-              <a href="#">name@example.com</a>
+              <a href="mailto:kiwi@thunderstorm.com">kiwi@thunderstorm.com</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 mb-3">
           <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+            <img class="card-img-top" src="https://steamuserimages-a.akamaihd.net/ugc/931562209079952837/C2AE894DC6606BD03B203C8D86D95E887E1C40D7/" height="150vh" alt="">
             <div class="card-body">
-              <h4 class="card-title">Ahmet Simbahoe</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+              <h4 class="card-title">Kiwi</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Anima y Alegra</h6>
+              <p class="card-text">Muy juguetón y simpático. Nunca se cansa.<br>Le gusta mirar por la ventana los coches que pasan.</p>
             </div>
             <div class="card-footer">
-              <a href="#">name@example.com</a>
+              <a href="mailto:kiwi@thunderstorm.com">kiwi@thunderstorm.com</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 mb-3">
           <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+            <img class="card-img-top" src="https://steamuserimages-a.akamaihd.net/ugc/931562209079952837/C2AE894DC6606BD03B203C8D86D95E887E1C40D7/" height="150vh" alt="">
             <div class="card-body">
               <h4 class="card-title">Kiwi</h4>
               <h6 class="card-subtitle mb-2 text-muted">Anima y Alegra</h6>
@@ -149,22 +149,22 @@
       <h2>Nuestros Clientes</h2>
       <div class="row">
         <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          <img class="img-fluid" src="https://idtxs3.imgix.net/si/00/07/5C.png?" alt="">
         </div>
         <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          <img class="img-fluid" src="https://idtxs3.imgix.net/si/00/07/5C.png?" alt="">
         </div>
         <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          <img class="img-fluid" src="https://idtxs3.imgix.net/si/00/07/5C.png?" alt="">
         </div>
         <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          <img class="img-fluid" src="https://idtxs3.imgix.net/si/00/07/5C.png?" alt="">
         </div>
         <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          <img class="img-fluid" src="https://idtxs3.imgix.net/si/00/07/5C.png?" alt="">
         </div>
         <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          <img class="img-fluid" src="https://idtxs3.imgix.net/si/00/07/5C.png?" alt="">
         </div>
       </div>
       <!-- /.row -->

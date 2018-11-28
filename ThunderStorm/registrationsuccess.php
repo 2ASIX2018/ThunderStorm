@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Xavi Ciscar">
 
-    <title>ThunderStorm | Acceder</title>
+    <title>ThunderStorm | Registrado</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,17 +27,16 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Acceder
-        <small>Area cliente</small>
+      <h1 class="mt-4 mb-3">Registro
+        <small>Ha tenido éxito!</small>
       </h1>
 
-    <div class="container">
-		<div class="alert alert-danger" role="alert">
-    		Error: Credenciales Incorrectos.
-		</div>
-		<a href="login.php">Volver</a>
-    <p>No dispones de un usuario? <a href="register.php">Crealo aquí!</a></p>
+      <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Todo listo!</strong> Ya formas parte de nuestro sistema! <a href="login.php" class="alert-link">Inicia sesión ahora con tu nuevo usuario</a>.
+      </div>
     </div>
+    <br>
 
     <!-- Pie de página -->
     <?php

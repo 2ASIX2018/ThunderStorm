@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if (isset($_COOKIE['/2ASIX2018/ThunderStorm/User'])) { $_SESSION['username'] = $_COOKIE['/2ASIX2018/ThunderStorm/User'];}
-if (isset($_COOKIE['/2ASIX2018/ThunderStorm/Role'])) { $_SESSION['role'] = $_COOKIE['/2ASIX2018/ThunderStorm/Role'];}
+if (isset($_COOKIE['2ASIX2018-ThunderStorm-User'])) { $_SESSION['username'] = $_COOKIE['2ASIX2018-ThunderStorm-User'];}
+if (isset($_COOKIE['2ASIX2018-ThunderStorm-Role'])) { $_SESSION['role'] = $_COOKIE['2ASIX2018-ThunderStorm-Role'];}
 ?>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -19,7 +19,9 @@ if (isset($_COOKIE['/2ASIX2018/ThunderStorm/Role'])) { $_SESSION['role'] = $_COO
             Hosting
           </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+        <!--
           <a class="dropdown-item" href="games.php">Game Servers</a>
+        -->
           <a class="dropdown-item" href="vps.php">Virtual Private Servers</a>
         </div>
         </li>
@@ -38,6 +40,13 @@ if (isset($_COOKIE['/2ASIX2018/ThunderStorm/Role'])) { $_SESSION['role'] = $_COO
       </ul>
       <ul class="navbar-nav ml-auto">
         <?php
+          if (isset($_SESSION['role']) && $_SESSION['role']=="user") {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="gamecart.php"><button type="button" class="btn btn-primary btn-sm">Contratar GameServer</button></a>
+          </li>
+        <?php
+          }
           if (isset($_SESSION['role']) && $_SESSION['role']=="admin") {
         ?>
           <li class="nav-item">

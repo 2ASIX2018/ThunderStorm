@@ -109,12 +109,19 @@
       <h2>GameServers</h2>
 
       <div class="row">
+        <?php
+          require_once("./models/services.php");
+          $servicio=new Service();
+          $servicios=$servicio->listServices();
+          // Ací podem configurar quants serveis volem visualitzar
+          for ($i=0; $i<6;$i++){
+        ?>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="./media/gfx/games/ark.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="<?php echo($servicios[$i]["imagen"]);?>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">ARK: Survival Evolved</a>
+                <a href="#"><?php echo($servicios[$i]["nombre"]);?></a>
               </h4>
               <p class="card-text"></p>
               <hr>
@@ -122,71 +129,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="./media/gfx/games/arma3.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Arma 3</a>
-              </h4>
-              <p class="card-text"></p>
-              <hr>
-              <a href="#" class="btn btn-primary">Contratar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="./media/gfx/games/csgo.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">CS:GO</a>
-              </h4>
-              <p class="card-text"></p>
-              <hr>
-              <a href="#" class="btn btn-primary">Contratar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="./media/gfx/games/mc.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Minecraft</a>
-              </h4>
-              <p class="card-text"></p>
-              <hr>
-              <a href="#" class="btn btn-primary">Contratar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="./media/gfx/games/rust.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Rust</a>
-              </h4>
-              <p class="card-text"></p>
-              <hr>
-              <a href="#" class="btn btn-primary">Contratar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="./media/gfx/games/unturned.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Unturned</a>
-              </h4>
-              <p class="card-text"></p>
-              <hr>
-              <a href="#" class="btn btn-primary">Contratar</a>
-            </div>
-          </div>
-        </div>
+        <?php
+          }
+        ?>
       </div>
       <!-- /.row -->
 

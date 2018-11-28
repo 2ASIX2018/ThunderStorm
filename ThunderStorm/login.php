@@ -29,9 +29,7 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Acceder
-        <small>Area cliente</small>
-      </h1>
+      <h1 class="mt-4 mb-3">Acceder</h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -43,7 +41,7 @@
       <!-- Formulari d'accés -->
       <div class="row">
         <div class="col-lg-8 mb-4">
-          <h3>Accede al sistema</h3>
+          <h3>Acreditarse en el sistema</h3>
           <form action="logincheck.php" method="post" id="FormularioAcceso">
             <div class="control-group form-group">
               <div class="controls">
@@ -59,7 +57,8 @@
               </div>
             </div>         
             <div class="checkbox">
-              <label><input type="checkbox" name="remember" id="rememberMe" value="true">
+              <label>
+                <input type="checkbox" name="rememberMe" id="rememberMe" value="true">
                 Recordarme en este equipo
               </label>
               </div>         
