@@ -47,10 +47,5 @@ Les diferents pàgines de què es composarà l'aplicació seran:
 ![Pàgina principal](imgs/admin.png)
 ThunderStorm es el nombre que recibe de mi proyeto de Implantación de Aplicaciones Web de 2º de ASIX.
 EL proyecto consistirá en la implantación de una página web cuyo contenido se distribuira según el siguiente esquema:
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
 En este repositorio subiré todo el progreso que se lleve a cabo.
