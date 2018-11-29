@@ -46,22 +46,22 @@
             <div class="control-group form-group">
               <div class="controls">
                 <label>Usuario:</label>
-                <input id="InputUsuari" type="text" class="form-control" name="inputUser" required="required" placeholder="usuario" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, introduce tu nombre de usuario.'; document.getElementById('InputUsuari').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('InputUsuari').classList.remove('is-invalid');">
+                <input id="InputUsuari" type="text" class="form-control" name="inputUser" required="required" placeholder="usuario" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('InputUsuari').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('InputUsuari').classList.remove('is-invalid');">
                 <p class="help-block"></p>
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Contraseña:</label>
-                <input id="InputContrasenya" type="password" class="form-control" name="inputPassword" required="required" placeholder="contraseña" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, introduce tu contraseña.'; document.getElementById('InputContrasenya').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('InputContrasenya').classList.remove('is-invalid');">
+                <input id="InputContrasenya" type="password" class="form-control" name="inputPassword" required="required" placeholder="contraseña" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('InputContrasenya').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('InputContrasenya').classList.remove('is-invalid');">
               </div>
-            </div>         
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="rememberMe" id="rememberMe" value="true">
-                Recordarme en este equipo
-              </label>
-              </div>         
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" name="rememberMe" value="true">
+                <label class="custom-control-label" for="customCheck1">Recordarme en este equipo</label>
+              </div>
+            </div>       
             <div class="controls">
               <label>No estás registrado? <a href="register.php">Regístrate ahora!</a></label>
             </div>

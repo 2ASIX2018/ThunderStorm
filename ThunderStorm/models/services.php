@@ -3,7 +3,7 @@ class Service{
     public function listServices(){
         try{
             // Conectem a la base de dades utilitzant les credencials de dbconfig.php
-            require_once "dbconfig.php";
+            require "dbconfig.php";
             $ConnectionString="mysql:host=".$dbhost["host"].";dbname=".$dbhost['db'];
             $db = new PDO($ConnectionString, $dbhost["user"], $dbhost["password"]);
 
@@ -26,6 +26,36 @@ class Service{
         catch (PDOException $e){
             echo("Error:".$e->getMessage());
             $dbCon=null;
+        }
+    }
+    public function addService($name, $price, $image){
+        try{
+            require "dbconfig.php";
+            $ConnectionString="mysql:host=".$dbhost["host"].";dbname=".$dbhost['db'];
+            $db = new PDO($ConnectionString, $dbhost["user"], $dbhost["password"]);
+
+            // Faig una primera consulta per tal de comprovar si ja hi ha un servei
+            // a la base de dades amb el nom introduit.
+            $checkservice = $db->prepare('SELECT * FROM Servicios WHERE nombre = ? LIMIT 1');
+            $checkservice->execute(array($name));
+            $existeixnom=$checkservice->fetch();
+            
+            // Si te valor la variable existeixnom, és a dir, si ha tingut èxit
+            // la consulta i sh'a trobat una coincidencia, ens mostrarà un error
+            // Si no hi han coincidencies, entrarà al else i crearà el servei
+            if ($existeixnom){
+                echo "Ya hay un servicio con el nombre introducido";
+            }
+            else{
+                $createservice = $db->prepare("INSERT INTO Servicios (`id_servicio`, `nombre`, `precio_por_slot`, `imagen`) VALUES (NULL, ?, ?, ?)");
+                $createservice->execute(array($name, $price, $image));
+                header("location: registrationsuccess.php");
+            }
+            $db=null;
+        }
+        catch (Exception $e){
+            echo("Error:".$e->getMessage());
+            $db=null;
         }
     }
 }

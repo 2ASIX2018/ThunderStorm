@@ -45,7 +45,8 @@
       $usuarios=$usuario->listUsers();
       ?>
       <h2>Gestión de usuarios</h2>
-      <table class="table table-hover">
+      <h5>Cambiar roles, editar servicios contratados u eliminar usuarios</h5>
+      <table class="table table-hover" style="vertical-align: center;">
         <thead class="bg-dark text-white">
           <tr>
             <th scope="col">Nombre</th>
@@ -62,7 +63,10 @@
             <th scope="row"><?php echo($usuarios[$i]["nombre"]);?></th>
             <td><?php echo($usuarios[$i]["email"]);?></td>
             <td><?php echo($usuarios[$i]["rol"]);?></td>
-            <td style="text-align: center;"><button class="btn btn-success" style="margin-right:2%;">Promover</button><button class="btn btn-warning" style="margin-left:2%;">Degradar</button></td>
+            <td style="text-align: center;">
+              <button class="btn btn-success" style="margin-right:2%;">Promover</button>
+              <button class="btn btn-warning" style="margin-left:2%;">Degradar</button>
+            </td>
             <td style="text-align: center;"><button class="btn btn-info">Editar</button></td>
             <td style="text-align: center"><button class="btn btn-danger">Suprimir</button></td>
           </tr>
@@ -71,15 +75,16 @@
       ?>
         </tbody>
       </table>
+      <hr><br>
 
       <h2>Gestión de servidores</h2>
-      <h4>Asignar Servidor a un Usuario</h4>
+      <h5>Asignar Servidor a un Usuario</h5>
 
       <form action="#" method="post" id="FormularioAddServer">
         <div class="control-group form-group">
           <div class="controls">
             <label>Usuario:</label>
-              <select id="usuario" class="form-control" required oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('usuario').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('usuario').classList.remove('is-invalid');">
+              <select id="usuario" class="form-control" required oninvalid="document.getElementById('FormularioAddServer-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('usuario').classList.add('is-invalid');" oninput="document.getElementById('FormularioAddServer-errors').innerHTML = ''; document.getElementById('usuario').classList.remove('is-invalid');">
                 <option value="">Selecciona el propietario</option>
                 <?php
                   for ($i=0; $i<count($usuarios);$i++){
@@ -92,7 +97,7 @@
               <br>
 
             <label>Categoría:</label>
-              <select id="categoria" class="form-control" required oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('categoria').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('categoria').classList.remove('is-invalid');">
+              <select id="categoria" class="form-control" required oninvalid="document.getElementById('FormularioAddServer-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('categoria').classList.add('is-invalid');" oninput="document.getElementById('FormularioAddServer-errors').innerHTML = ''; document.getElementById('categoria').classList.remove('is-invalid');">
                 <option value="">Elija el tipo de servidor a asignar</option>
 
                 <?php
@@ -108,39 +113,32 @@
                 PHP Warning:  count(): Parameter must be an array or an object that implements Countable in
                 /home/eljust/Escriptori/github/ThunderStorm/ThunderStorm/siteadmin.php on line 89,
                 referer: http://localhost/IAW/ThunderStorm/index.php
+                
+                -- Doncs sí que era això, al haver carregat ja les variables i el fitxer dbconfig.php
+                -- amb el "require_once("./models/webusers.php");" anterior, ja no tornava a carregar les dades
+                -- requerides per a conectar a la base de dades, per això la variable servicios no tenia valor
+                -- i, conseqüentment, el count tampoc funcionava. Canviant el require_once per require en el fitxer
+                -- hem conseguit solucionar l'incidència
 
+                */
                   require_once("./models/services.php");
                   $servicio=new Service();
                   $servicios=$servicio->listServices();
                   for ($i=0; $i<count($servicios);$i++){
-                  */
                 ?>
-                <!--
                 <option value="<?php echo($servicios[$i]["id_servicio"]);?>"><?php echo($servicios[$i]["nombre"]);?></option>
-                -->
                 <?php
-                /*
                   }
-                */
                 ?>
-              <!-- Posarem temporalment el codi amb HTML fins solventar l'incidencia amb PHP -->
-                <option value="1">ARK: Survival Evolved</option>
-                <option value="2">Arma 3</option>
-                <option value="3">Counter-Strike: Global Offensive</option>
-                <option value="4">Minecraft</option>
-                <option value="5">Rust</option>
-                <option value="6">Unturned</option>
-              <!-- Fi de codi HTML Temporal -->
-
               </select>
                 <br>
 
                 <label>Slots:</label>
-                <input id="slots" type="number" class="form-control" required min="1" max="500" placeholder="¿Para cuántos jugadores?" oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('slots').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('slots').classList.remove('is-invalid');">
+                <input id="slots" type="number" class="form-control" required min="1" max="500" placeholder="¿Para cuántos jugadores?" oninvalid="document.getElementById('FormularioAddServer-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('slots').classList.add('is-invalid');" oninput="document.getElementById('FormularioAddServer-errors').innerHTML = ''; document.getElementById('slots').classList.remove('is-invalid');">
                 <br>
 
                 <label>Mensualidades a contratar:</label>
-                <select id="mensualidades" class="form-control" required oninvalid="document.getElementById('controla-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('mensualidades').classList.add('is-invalid');" oninput="document.getElementById('controla-errors').innerHTML = ''; document.getElementById('mensualidades').classList.remove('is-invalid');">
+                <select id="mensualidades" class="form-control" required oninvalid="document.getElementById('FormularioAddServer-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('mensualidades').classList.add('is-invalid');" oninput="document.getElementById('FormularioAddServer-errors').innerHTML = ''; document.getElementById('mensualidades').classList.remove('is-invalid');">
                   <option value="">¿Cuantos meses ha contratado?</option>
                   <option value="1m">1 Mes</option>
                   <option value="3m">3 Meses</option>
@@ -149,10 +147,36 @@
                 </select>
               </div>
             </div>
-            <div id="controla-errors" class="alert-dismissible alert-danger" style="color: red"></div>
+            <div id="FormularioAddServer-errors" class="alert-dismissible alert-danger" style="color: red"></div>
             <br>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
+          <hr><br>
+
+      <h2>Gestión de servicios</h2>
+      <h5>Añadir un servicio</h5>
+
+      <form action="addservice.php" method="post" id="FormularioAddService" enctype="multipart/form-data">
+        <div class="control-group form-group controls">
+          <label>Nombre:</label>
+          <input id="servicename" name="servicename" type="text" class="form-control" required placeholder="Nombre del servicio" oninvalid="document.getElementById('FormularioAddService-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('servicename').classList.add('is-invalid');" oninput="document.getElementById('FormularioAddService-errors').innerHTML = ''; document.getElementById('servicename').classList.remove('is-invalid');">
+          <br>
+
+          <label>Precio por slot:</label>
+          <input id="serviceprice" name="serviceprice" type="text" class="form-control" required placeholder="Precio por slot en formato X.XX" oninvalid="document.getElementById('FormularioAddService-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('serviceprice').classList.add('is-invalid');" oninput="document.getElementById('FormularioAddService-errors').innerHTML = ''; document.getElementById('serviceprice').classList.remove('is-invalid');">
+          <br>
+          
+          <label>Imagen del servicio (preferiblemente 1280x720):</label>
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input type="file" name="serviceimage" id="serviceimage"required oninvalid="document.getElementById('FormularioAddService-errors').innerHTML = 'Por favor, compruebe los datos introducidos.'; document.getElementById('serviceimage').classList.add('is-invalid');" oninput="document.getElementById('FormularioAddService-errors').innerHTML = ''; document.getElementById('serviceimage').classList.remove('is-invalid');">
+            </div>
+          </div>
+        </div>
+        <div id="FormularioAddService-errors" class="alert-dismissible alert-danger" style="color: red"></div>
+        <br>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
 
     </div>
     <!-- /.container -->

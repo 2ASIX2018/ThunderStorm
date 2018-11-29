@@ -1,52 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Xavi Ciscar">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Xavi Ciscar">
 
-    <title>ThunderStorm | Acceder</title>
+  <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="./css/cercleblau.css" rel="stylesheet" id="bootstrap-css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./vendor/jquery/jquery.min.js"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+  <title>ThunderStorm | LoginFailed</title>
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <!-- Menu -->
-    <?php
-      require_once ("menu.php");
-    ?>
+  <?php
+  header("refresh: 2; url=login.php");
+  ?>
 
-    <!-- Page Content -->
-    <div class="container">
+  <h2 style="text-align: center; color: red; font-weight: bold; text-align: center;">Credenciales Incorrectos</h2>
+  <p class="text-white" style="text-align: center;">Redireccionando...</p>
 
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Acceder
-        <small>Area cliente</small>
-      </h1>
-
-    <div class="container">
-		<div class="alert alert-danger" role="alert">
-    		Error: Credenciales Incorrectos.
-		</div>
-		<a href="login.php">Volver</a>
-    <p>No dispones de un usuario? <a href="register.php">Crealo aquí!</a></p>
-    </div>
-
-    <!-- Pie de página -->
-    <?php
-      require_once ("footer.php");
-    ?>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
+</body>
 </html>
